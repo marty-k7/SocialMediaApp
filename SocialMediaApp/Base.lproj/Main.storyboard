@@ -1,14 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Sign InVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInVC" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +25,132 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSL-5Z-7o3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopes-logo" translatesAutoresizingMaskIntoConstraints="NO" id="rvz-v4-WIq">
+                                        <rect key="frame" x="90" y="15" width="195" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="195" id="GjI-si-o2c"/>
+                                            <constraint firstAttribute="height" constant="120" id="mug-Ux-yy0"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="rvz-v4-WIq" firstAttribute="centerY" secondItem="ZSL-5Z-7o3" secondAttribute="centerY" id="BWT-6b-EBD"/>
+                                    <constraint firstAttribute="height" constant="150" id="Gxc-Nq-vZ0"/>
+                                    <constraint firstItem="rvz-v4-WIq" firstAttribute="centerX" secondItem="ZSL-5Z-7o3" secondAttribute="centerX" id="bab-G6-xNn"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ENH-6g-k8V">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you haven't sign in before, an account will be automatically created for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHk-Vt-LN2">
+                                        <rect key="frame" x="38" y="21.5" width="300" height="37.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="aFV-75-xmw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.73333333333333328" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="gHk-Vt-LN2" firstAttribute="centerX" secondItem="ENH-6g-k8V" secondAttribute="centerX" id="MOA-X2-jn7"/>
+                                    <constraint firstAttribute="height" constant="80" id="Tho-T6-4Bb"/>
+                                    <constraint firstItem="gHk-Vt-LN2" firstAttribute="centerY" secondItem="ENH-6g-k8V" secondAttribute="centerY" id="zkI-Ps-pYh"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select sign in method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zz5-sL-KZO">
+                                <rect key="frame" x="106" y="165" width="163" height="20"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="js3-xe-q0J">
+                                <rect key="frame" x="57" y="374" width="260" height="122"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jpv-lr-fHn" customClass="MaterialTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="icH-rA-Hxn"/>
+                                            <constraint firstAttribute="width" constant="260" id="uSX-yI-lfy"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ltH-9U-rZa" customClass="MaterialTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="45" width="260" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="G8m-Jl-DRT"/>
+                                            <constraint firstAttribute="width" constant="260" id="mks-GY-qYY"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyx-YP-dJ7">
+                                        <rect key="frame" x="0.0" y="90" width="260" height="32"/>
+                                        <color key="backgroundColor" red="0.71850734949111938" green="0.29869166016578674" blue="0.1380540132522583" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9KJ-8S-74H"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MK6-H6-dUZ">
+                                <rect key="frame" x="122" y="205" width="130" height="130"/>
+                                <color key="backgroundColor" red="0.32597881555557251" green="0.41127297282218933" blue="0.6467362642288208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="19F-7R-Cwy"/>
+                                    <constraint firstAttribute="height" constant="130" id="daE-7T-NWa"/>
+                                </constraints>
+                                <state key="normal" image="f"/>
+                                <connections>
+                                    <action selector="fbTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ieC-M6-09W"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zz5-sL-KZO" firstAttribute="top" secondItem="ZSL-5Z-7o3" secondAttribute="bottom" constant="15" id="0D0-Vd-Fc7"/>
+                            <constraint firstItem="zz5-sL-KZO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7j3-RH-hRD"/>
+                            <constraint firstItem="ZSL-5Z-7o3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="82p-cK-rFv"/>
+                            <constraint firstItem="js3-xe-q0J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9VH-zJ-1Od"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ENH-6g-k8V" secondAttribute="bottom" id="BHW-Gs-MuQ"/>
+                            <constraint firstItem="js3-xe-q0J" firstAttribute="top" secondItem="MK6-H6-dUZ" secondAttribute="bottom" constant="38.5" id="E6e-LL-IeM"/>
+                            <constraint firstItem="ZSL-5Z-7o3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="e0i-6A-dfv"/>
+                            <constraint firstAttribute="trailing" secondItem="ZSL-5Z-7o3" secondAttribute="trailing" id="haC-fU-bVp"/>
+                            <constraint firstAttribute="trailing" secondItem="ENH-6g-k8V" secondAttribute="trailing" id="ie0-HY-dzX"/>
+                            <constraint firstItem="MK6-H6-dUZ" firstAttribute="top" secondItem="zz5-sL-KZO" secondAttribute="bottom" constant="20" id="qJf-sC-Opj"/>
+                            <constraint firstItem="ENH-6g-k8V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wjH-4c-srB"/>
+                            <constraint firstItem="MK6-H6-dUZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x4x-w8-K7Z"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SignIn" destination="vyx-YP-dJ7" id="mFl-cE-phP"/>
+                        <outlet property="email" destination="Jpv-lr-fHn" id="Vf4-T2-Yva"/>
+                        <outlet property="facebookLogIn" destination="MK6-H6-dUZ" id="OCz-X0-TTK"/>
+                        <outlet property="ground" destination="ENH-6g-k8V" id="0IO-Lm-RRK"/>
+                        <outlet property="header" destination="ZSL-5Z-7o3" id="ysR-K0-pNq"/>
+                        <outlet property="password" destination="ltH-9U-rZa" id="80P-X9-s9P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="119.2" y="96.7016491754123"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="devslopes-logo" width="150" height="94"/>
+        <image name="f" width="352" height="328"/>
+    </resources>
 </document>
